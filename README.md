@@ -1,1 +1,1 @@
-# rails-7-boilerplate
+# rails-7-rest-api-boilerplate
