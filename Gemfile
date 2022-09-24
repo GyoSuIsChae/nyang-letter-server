@@ -143,6 +143,3 @@ gem "sidekiq-cron", "~> 1.7"
 
 # HTTP/REST API client library.
 gem "faraday", "~> 2.5", ">= 2.5.2"
-
-# A pure ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard.
-gem "jwt", "~> 2.5"
