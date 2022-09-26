@@ -1,15 +1,15 @@
 # database.yml
-development:
-  url: <%= ENV['DATABASE_URL'] %>
-  variables:
-    sql_mode: 'TRADITIONAL'
+#development:
+#  url: <%#= ENV['DATABASE_URL'] %>
+#  variables:
+#    sql_mode: 'TRADITIONAL'
 
-test:
-  url: <%= ENV['TEST_DATABASE_URL'] %>
-  variables:
-    sql_mode: 'TRADITIONAL'
+#test:
+#  url: <%#= ENV['TEST_DATABASE_URL'] %>
+#  variables:
+#    sql_mode: 'TRADITIONAL'
 
-production:
-  url: <%= ENV['DATABASE_URL'] %>
-  variables:
-    sql_mode: 'TRADITIONAL'
+#production:
+#  url: <%#= ENV['DATABASE_URL'] %>
+#  variables:
+#    sql_mode: 'TRADITIONAL'
