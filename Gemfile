@@ -66,6 +66,15 @@ group :development, :test do
   # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality that, if written by hand, would be much longer, more complex, and error-prone.
   gem "shoulda-matchers", "~> 5.2"
 
+  # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer
+  gem "factory_bot_rails", "~> 6.2"
+
+  # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
+  gem "faker", "~> 2.19"
+
+  # Ffaker generates dummy data.
+  gem "ffaker", "~> 2.20"
+
   gem "rspec-rails", "~> 5.1", ">= 5.1.2"
 
   # RuboCop is a Ruby code style checking and code formatting tool.
@@ -100,6 +109,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem "spring"
+
+  # The Listen gem listens to file modifications and notifies you about the changes. Works everywhere!
+  gem "listen", "~> 3.7"
 end
 
 group :test do
@@ -143,3 +155,6 @@ gem "sidekiq-cron", "~> 1.7"
 
 # HTTP/REST API client library.
 gem "faraday", "~> 2.5", ">= 2.5.2"
+
+# ActiveModel Serializers addon for eliminating N+1 queries problem from the serializers.
+gem "ams_lazy_relationships", "~> 0.3.2"
