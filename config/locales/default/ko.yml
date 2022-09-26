@@ -1,0 +1,26 @@
+ko:
+  hello: "환영합니다!"
+  errors:
+  active_interaction:
+    errors:
+      messages:
+        invalid: "잘못되었습니다."
+        invalid_nested: "은(는) 잘못된 중첩 값입니다. (%{name} => %{value})"
+        invalid_type: "은(는) 잘못된 %{type}입니다."
+        missing: "은(는) 필요합니다."
+    types:
+      array: array
+      boolean: boolean
+      date: date
+      date_time: datetime
+      decimal: decimal
+      file: file
+      float: float
+      hash: hash
+      integer: integer
+      interface: interface
+      object: object
+      record: record
+      string: string
+      symbol: symbol
+      time: time
