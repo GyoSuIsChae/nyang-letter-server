@@ -32,7 +32,7 @@ class ApplicationController < ActionController::API
   end
   rescue_from BaseError do |exception|
     Rails.logger.info(exception)
-    render error: { status: 400, code: I18n.t("base_errors.#{exception.to_s.underscore}.code"),
+    render error: { status: I18n.t("base_errors.#{exception.to_s.underscore}.code").to_s.slice(0..2), code: I18n.t("base_errors.#{exception.to_s.underscore}.code"),
                     message: I18n.t("base_errors.#{exception.to_s.underscore}.message"), context: exception.class.to_s }
   end
   def api_params
