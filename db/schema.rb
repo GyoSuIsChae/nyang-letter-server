@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_16_122315) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_12_164315) do
   create_table "cafes", charset: "utf8mb4", collation: "utf8mb4_general_ci", comment: "카페", force: :cascade do |t|
     t.string "uid", limit: 36
     t.bigint "user_id"
@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_16_122315) do
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_general_ci", comment: "사용자", force: :cascade do |t|
     t.string "uid", limit: 36
+    t.string "social_id"
     t.string "nickname", limit: 100, comment: "닉네임"
     t.string "login_type", limit: 2, comment: "로그인 타입 10: kakao 20: google 30: naver"
     t.string "email", limit: 100, comment: "이메일"

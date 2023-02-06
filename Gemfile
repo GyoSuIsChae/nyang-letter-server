@@ -158,3 +158,9 @@ gem "faraday", "~> 2.5", ">= 2.5.2"
 
 # ActiveModel Serializers addon for eliminating N+1 queries problem from the serializers.
 gem "ams_lazy_relationships", "~> 0.3.2"
+
+# A Ruby wrapper for the OAuth 2.0 protocol built with a similar style to the original OAuth spec.
+gem "oauth2", "~> 1.4", ">= 1.4.7"
+
+# A pure ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard.
+gem "jwt", "~> 2.3"
