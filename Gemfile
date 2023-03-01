@@ -11,8 +11,8 @@ gem "rails", "~> 7.0.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# Use mysql as the database for Active Record
+gem "mysql2", "~> 0.5"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -158,3 +158,9 @@ gem "faraday", "~> 2.5", ">= 2.5.2"
 
 # ActiveModel Serializers addon for eliminating N+1 queries problem from the serializers.
 gem "ams_lazy_relationships", "~> 0.3.2"
+
+# A Ruby wrapper for the OAuth 2.0 protocol built with a similar style to the original OAuth spec.
+gem "oauth2", "~> 1.4", ">= 1.4.7"
+
+# A pure ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard.
+gem "jwt", "~> 2.3"

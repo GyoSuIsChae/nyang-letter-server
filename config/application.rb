@@ -41,7 +41,7 @@ module Rails7RestApiBoilerplate
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    config.autoload_paths += [Rails.root.join("app/services/concern"), Rails.root.join("app/errors")]
+    config.autoload_paths += [Rails.root.join("app/services/concern"), Rails.root.join("app/errors"), Rails.root.join("lib")]
     config.time_zone = "Asia/Seoul"
     config.active_record.default_timezone = :local
 
@@ -74,5 +74,11 @@ module Rails7RestApiBoilerplate
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}")]
     config.i18n.available_locales = [:ko]
     config.i18n.default_locale = :ko
+
+    config.x.auth.access_token_ttl_in_seconds = 60.day.to_i
+    config.x.auth.refresh_token_ttl_in_seconds = 180.days.to_i
+
+    config.x.auth.secret_key = ENV.fetch("AUTH_SECRET_KEY", "")
+    config.x.auth.signing_algorithm = ENV.fetch("AUTH_SIGNING_ALGORITHM", "")
   end
 end
