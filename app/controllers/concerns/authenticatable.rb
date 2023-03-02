@@ -31,7 +31,7 @@ module Authenticatable
 
   def status
     case @user.status.to_sym
-    when :complete, :block
+    when :active
       @user
     else
       nil
