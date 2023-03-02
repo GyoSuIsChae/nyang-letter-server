@@ -16,7 +16,7 @@ class Users::UpdateService < ServiceBase
 
     if nickname != nil
       # 닉네임 중복 체크
-      if User.find_by(nickname: nickname).present?
+      if User.by_nickname(nickname).present?
         raise Users::IsAlreadyExistNicknameError.new
       end
 
