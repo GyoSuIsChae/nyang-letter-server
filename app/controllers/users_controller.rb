@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:show]
+  before_action :authenticate_user!, only: [:show, :update]
 =begin
   소셜 로그인 API
   request URI: /api/v1/users/sign-in
@@ -20,6 +20,14 @@ class UsersController < ApplicationController
     render api: result, status: :ok
   end
 
+=begin
+  유저 정보 수정 API
+=end
+  def update
+    result = Users::UpdateService.run!(update_params)
+    render api: result, status: :ok
+  end
+
   private
     def sign_in_params
       api_params.permit(:login_type, :access_code)
@@ -27,5 +35,9 @@ class UsersController < ApplicationController
 
     def show_params
       api_params.permit(:uid).merge(token_user_uid: current_user.uid)
+    end
+
+    def update_params
+      api_params.permit(:uid, :nickname, :is_complete_tutorial).merge(user: current_user)
     end
 end
