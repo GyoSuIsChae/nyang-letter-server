@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   scope "/v1" do
     get "/health/ping", to: "welcome#ping"
 
-    resources :users, controller: :users, param: :uid, only: [:show] do
+    resources :users, controller: :users, param: :uid, only: [:show, :update] do
       post "sign-in", on: :collection, action: :sign_in # /v1/users/sign-up
     end
   end
