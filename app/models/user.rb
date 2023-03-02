@@ -10,4 +10,5 @@ class User < ApplicationRecord
   scope :by_social_id, -> (social_id) { where(social_id: social_id) }
   scope :by_login_type, -> (login_type) { where(login_type: login_type) }
   scope :by_nickname, -> (nickname) { where(nickname: nickname) }
+  scope :by_uid, -> (uid) { where(uid: uid) }
 end
