@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -53,5 +55,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_12_164315) do
     t.datetime "deleted_at"
     t.index ["uid"], name: "index_users_on_uid"
   end
-
 end
