@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
     resources :users, controller: :users, param: :uid, only: [:show, :update] do
       post "sign-in", on: :collection, action: :sign_in # /v1/users/sign-up
+      resources :cafes, controller: :cafes, param: :uid, only: [:create]
     end
   end
 end

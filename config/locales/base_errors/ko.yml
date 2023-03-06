@@ -29,3 +29,9 @@ ko:
     users/is_already_exist_nickname_error:
       code: 40010
       message: 이미 존재하는 닉네임입니다.
+    cafes/name_limit_error:
+      code: 40030
+      message: 카페 이름은 50자 이내로 입력해주세요.
+    cafes/open_at_is_can_not_earlier_than_now_error:
+      code: 40031
+      message: 카페 오픈 예정일은 현재 시각 이전일 수 없습니다.
